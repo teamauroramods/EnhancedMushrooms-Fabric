@@ -1,0 +1,41 @@
+{
+  "_comment": "Muchomorowe bloki i przedmioty",
+  "block.enhanced_mushrooms.red_mushroom_stem": "Muchomorowy trzon",
+  "block.enhanced_mushrooms.stripped_red_mushroom_stem": "Ociosany muchomorowy trzon",
+  "block.enhanced_mushrooms.red_mushroom_hyphae": "Muchomorowe strzępki",
+  "block.enhanced_mushrooms.stripped_red_mushroom_hyphae": "Ociosane muchomorowe strzępki",
+  "block.enhanced_mushrooms.red_mushroom_planks": "Muchomorowe deski",
+  "block.enhanced_mushrooms.red_mushroom_slab": "Muchomorowa płyta",
+  "block.enhanced_mushrooms.red_mushroom_stairs": "Muchomorowe schody",
+  "block.enhanced_mushrooms.red_mushroom_pressure_plate": "Muchomorowa płyta naciskowa",
+  "block.enhanced_mushrooms.red_mushroom_fence": "Muchomorowy płot",
+  "block.enhanced_mushrooms.red_mushroom_fence_gate": "Muchomorowa furtka",
+  "block.enhanced_mushrooms.red_mushroom_button": "Muchomorowy przycisk",
+  "block.enhanced_mushrooms.red_mushroom_trapdoor": "Muchomorowa klapa",
+  "block.enhanced_mushrooms.red_mushroom_door": "Muchomorowe drzwi",
+  "block.enhanced_mushrooms.red_mushroom_sign": "Muchomorowa tabliczka",
+
+  "item.enhanced_mushrooms.red_mushroom_boat": "Muchomorowa łódka",
+
+  "_comment2": "Borowikowe bloki i przedmioty",
+  "block.enhanced_mushrooms.brown_mushroom_stem": "Borowikowy trzon",
+  "block.enhanced_mushrooms.stripped_brown_mushroom_stem": "Ociosany borowikowy trzon",
+  "block.enhanced_mushrooms.brown_mushroom_hyphae": "Borowikowe strzępki",
+  "block.enhanced_mushrooms.stripped_brown_mushroom_hyphae": "Ociosane borowikowe strzępki",
+  "block.enhanced_mushrooms.brown_mushroom_planks": "Borowikowe deski",
+  "block.enhanced_mushrooms.brown_mushroom_slab": "Borowikowa płyta",
+  "block.enhanced_mushrooms.brown_mushroom_stairs": "Borowikowe schody",
+  "block.enhanced_mushrooms.brown_mushroom_pressure_plate": "Borowikowa płyta naciskowa",
+  "block.enhanced_mushrooms.brown_mushroom_fence": "Borowikowy płot",
+  "block.enhanced_mushrooms.brown_mushroom_fence_gate": "Borowikowa furtka",
+  "block.enhanced_mushrooms.brown_mushroom_button": "Borowikowy przycisk",
+  "block.enhanced_mushrooms.brown_mushroom_trapdoor": "Borowikowa klapa",
+  "block.enhanced_mushrooms.brown_mushroom_door": "Borowikowe drzwi",
+  "block.enhanced_mushrooms.brown_mushroom_sign": "Borowikowa tabliczka",
+
+  "item.enhanced_mushrooms.brown_mushroom_boat": "Borowikowa łódka",
+
+  "_comment3": "Różne",
+  "item.enhanced_mushrooms.roasted_mushrooms": "Pieczone grzyby",
+  "item.enhanced_mushrooms.beef_stew": "Gulasz wołowy"
+}

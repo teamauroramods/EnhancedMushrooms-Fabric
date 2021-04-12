@@ -1,0 +1,41 @@
+{
+  "_comment": "Red Mushroom Blocks & Items",
+  "block.enhanced_mushrooms.red_mushroom_stem": "Tallo de champiñón rojo",
+  "block.enhanced_mushrooms.stripped_red_mushroom_stem": "Tallo de champiñón rojo sin corteza",
+  "block.enhanced_mushrooms.red_mushroom_hyphae": "Hifas de champiñón rojo",
+  "block.enhanced_mushrooms.stripped_red_mushroom_hyphae": "Hifas de champiñón rojo sin corteza",
+  "block.enhanced_mushrooms.red_mushroom_planks": "Madera de champiñón rojo",
+  "block.enhanced_mushrooms.red_mushroom_slab": "Losa de champiñón rojo",
+  "block.enhanced_mushrooms.red_mushroom_stairs": "Escaleras de champiñón rojo",
+  "block.enhanced_mushrooms.red_mushroom_pressure_plate": "Placa de presión de champiñón rojo",
+  "block.enhanced_mushrooms.red_mushroom_fence": "Valla de champiñón rojo",
+  "block.enhanced_mushrooms.red_mushroom_fence_gate": "Puerta de valla de champiñón rojo",
+  "block.enhanced_mushrooms.red_mushroom_button": "Botón de champiñón rojo",
+  "block.enhanced_mushrooms.red_mushroom_trapdoor": "Trampilla de champiñón rojo",
+  "block.enhanced_mushrooms.red_mushroom_door": "Puerta de champiñón rojo",
+  "block.enhanced_mushrooms.red_mushroom_sign": "Cartel de champiñón rojo",
+
+  "item.enhanced_mushrooms.red_mushroom_boat": "Barca de champiñón rojo",
+
+  "_comment2": "Brown Mushroom Blocks & Items",
+  "block.enhanced_mushrooms.brown_mushroom_stem": "Tallo de champiñón marrón",
+  "block.enhanced_mushrooms.stripped_brown_mushroom_stem": "Tallo de champiñón marrón sin corteza",
+  "block.enhanced_mushrooms.brown_mushroom_hyphae": "Hifas de champiñón marrón",
+  "block.enhanced_mushrooms.stripped_brown_mushroom_hyphae": "Hifas de champiñón marrón sin corteza",
+  "block.enhanced_mushrooms.brown_mushroom_planks": "Madera de champiñón marrón",
+  "block.enhanced_mushrooms.brown_mushroom_slab": "Losa de champiñón marrón",
+  "block.enhanced_mushrooms.brown_mushroom_stairs": "Escaleras de champiñón marrón",
+  "block.enhanced_mushrooms.brown_mushroom_pressure_plate": "Placa de presión de champiñón marrón",
+  "block.enhanced_mushrooms.brown_mushroom_fence": "Valla de champiñón marrón",
+  "block.enhanced_mushrooms.brown_mushroom_fence_gate": "Puerta de valla de champiñón marrón",
+  "block.enhanced_mushrooms.brown_mushroom_button": "Botón de champiñón marrón",
+  "block.enhanced_mushrooms.brown_mushroom_trapdoor": "Trampilla de champiñón marrón",
+  "block.enhanced_mushrooms.brown_mushroom_door": "Puerta de champiñón marrón",
+  "block.enhanced_mushrooms.brown_mushroom_sign": "Cartel de champiñón marrón",
+
+  "item.enhanced_mushrooms.brown_mushroom_boat": "Barca de champiñón marrón",
+
+  "_comment3": "Misc",
+  "item.enhanced_mushrooms.roasted_mushrooms": "Champiñones rostizados",
+  "item.enhanced_mushrooms.beef_stew": "Estofado de res"
+}

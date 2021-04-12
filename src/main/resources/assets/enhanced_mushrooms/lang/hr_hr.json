@@ -1,0 +1,41 @@
+{
+  "_comment": "Red Mushroom Blocks & Items",
+  "block.enhanced_mushrooms.red_mushroom_stem": "Stručak crvene gljive",
+  "block.enhanced_mushrooms.stripped_red_mushroom_stem": "Oguljeni stručak crvene gljive",
+  "block.enhanced_mushrooms.red_mushroom_hyphae": "Hife crvene gljive",
+  "block.enhanced_mushrooms.stripped_red_mushroom_hyphae": "Oguljene hife crvene gljive",
+  "block.enhanced_mushrooms.red_mushroom_planks": "Daske od crvenih gljiva",
+  "block.enhanced_mushrooms.red_mushroom_slab": "Ploča od crvenih gljiva",
+  "block.enhanced_mushrooms.red_mushroom_stairs": "Stube od crvenih gljiva",
+  "block.enhanced_mushrooms.red_mushroom_pressure_plate": "Nagazna ploča od crvenih gljiva",
+  "block.enhanced_mushrooms.red_mushroom_fence": "Ograda od crvenih gljiva",
+  "block.enhanced_mushrooms.red_mushroom_fence_gate": "Vrata za ogradu od crvenih gljiva",
+  "block.enhanced_mushrooms.red_mushroom_button": "Gumb od crvenih gljiva",
+  "block.enhanced_mushrooms.red_mushroom_trapdoor": "Podna vrata od crvenih gljiva",
+  "block.enhanced_mushrooms.red_mushroom_door": "Vrata od crvenih gljiva",
+  "block.enhanced_mushrooms.red_mushroom_sign": "Znak od crvenih gljiva",
+
+  "item.enhanced_mushrooms.red_mushroom_boat": "Čamac od crvenih gljiva",
+
+  "_comment2": "Brown Mushroom Blocks & Items",
+  "block.enhanced_mushrooms.brown_mushroom_stem": "Stručak smeđe gljive",
+  "block.enhanced_mushrooms.stripped_brown_mushroom_stem": "Oguljeni stručak smeđe gljive",
+  "block.enhanced_mushrooms.brown_mushroom_hyphae": "Hife smeđe gljive",
+  "block.enhanced_mushrooms.stripped_brown_mushroom_hyphae": "Oguljene hife smeđe gljive",
+  "block.enhanced_mushrooms.brown_mushroom_planks": "Daske od smeđih gljiva",
+  "block.enhanced_mushrooms.brown_mushroom_slab": "Ploča od smeđih gljiva",
+  "block.enhanced_mushrooms.brown_mushroom_stairs": "Stube od smeđih gljiva",
+  "block.enhanced_mushrooms.brown_mushroom_pressure_plate": "Nagazna ploča od smeđih gljiva",
+  "block.enhanced_mushrooms.brown_mushroom_fence": "Ograda od smeđih gljiva",
+  "block.enhanced_mushrooms.brown_mushroom_fence_gate": "Vrata za ogradu od smeđih gljiva",
+  "block.enhanced_mushrooms.brown_mushroom_button": "Gumb od smeđih gljiva",
+  "block.enhanced_mushrooms.brown_mushroom_trapdoor": "Podna vrata od smeđih gljiva",
+  "block.enhanced_mushrooms.brown_mushroom_door": "Vrata od smeđih gljiva",
+  "block.enhanced_mushrooms.brown_mushroom_sign": "Znak od smeđih gljiva",
+
+  "item.enhanced_mushrooms.brown_mushroom_boat": "Čamac od smeđih gljiva",
+
+  "_comment3": "Misc",
+  "item.enhanced_mushrooms.roasted_mushrooms": "Pečene gljive",
+  "item.enhanced_mushrooms.beef_stew": "Gulaš od govedine"
+}

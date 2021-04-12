@@ -1,0 +1,41 @@
+{
+  "_comment": "Red Mushroom Blocks & Items",
+  "block.enhanced_mushrooms.red_mushroom_stem": "Roter Pilzstiel",
+  "block.enhanced_mushrooms.stripped_red_mushroom_stem": "Geschälter roter Pilzstiel",
+  "block.enhanced_mushrooms.red_mushroom_hyphae": "Rote Pilzhyphen",
+  "block.enhanced_mushrooms.stripped_red_mushroom_hyphae": "Geschälte rote Pilzhyphen",
+  "block.enhanced_mushrooms.red_mushroom_planks": "Rote Pilzbretter",
+  "block.enhanced_mushrooms.red_mushroom_slab": "Rote Pilzstufe",
+  "block.enhanced_mushrooms.red_mushroom_stairs": "Rote Pilztreppe",
+  "block.enhanced_mushrooms.red_mushroom_pressure_plate": "Rote Pilzdruckplatte",
+  "block.enhanced_mushrooms.red_mushroom_fence": "Roter Pilzzaun",
+  "block.enhanced_mushrooms.red_mushroom_fence_gate": "Rotes Pilzzauntor",
+  "block.enhanced_mushrooms.red_mushroom_button": "Roter Pilzknopf",
+  "block.enhanced_mushrooms.red_mushroom_trapdoor": "Rote Pilzfalltür",
+  "block.enhanced_mushrooms.red_mushroom_door": "Rote Pilztür",
+  "block.enhanced_mushrooms.red_mushroom_sign": "Rotes Pilzschild",
+
+  "item.enhanced_mushrooms.red_mushroom_boat": "Rotes Pilzboot",
+
+  "_comment2": "Brown Mushroom Blocks & Items",
+  "block.enhanced_mushrooms.brown_mushroom_stem": "Brauner Pilzstiel",
+  "block.enhanced_mushrooms.stripped_brown_mushroom_stem": "Geschälter brauner Pilzstiel",
+  "block.enhanced_mushrooms.brown_mushroom_hyphae": "Braune Pilzhyphen",
+  "block.enhanced_mushrooms.stripped_brown_mushroom_hyphae": "Geschälte braune Pilzhyphen",
+  "block.enhanced_mushrooms.brown_mushroom_planks": "Braune Pilzbretter",
+  "block.enhanced_mushrooms.brown_mushroom_slab": "Braune Pilzstufe",
+  "block.enhanced_mushrooms.brown_mushroom_stairs": "Braune Pilztreppe",
+  "block.enhanced_mushrooms.brown_mushroom_pressure_plate": "Braune Pilzdruckplatte",
+  "block.enhanced_mushrooms.brown_mushroom_fence": "Brauner Pilzzaun",
+  "block.enhanced_mushrooms.brown_mushroom_fence_gate": "Braunes Pilzzauntor",
+  "block.enhanced_mushrooms.brown_mushroom_button": "Brauner Pilzknopf",
+  "block.enhanced_mushrooms.brown_mushroom_trapdoor": "Braune Pilzfalltür",
+  "block.enhanced_mushrooms.brown_mushroom_door": "Braune Pilztür",
+  "block.enhanced_mushrooms.brown_mushroom_sign": "Braunes Pilzschild",
+
+  "item.enhanced_mushrooms.brown_mushroom_boat": "Braunes Pilzboot",
+
+  "_comment3": "Misc",
+  "item.enhanced_mushrooms.roasted_mushrooms": "Gebratene Pilze",
+  "item.enhanced_mushrooms.beef_stew": "Rinderragout"
+}

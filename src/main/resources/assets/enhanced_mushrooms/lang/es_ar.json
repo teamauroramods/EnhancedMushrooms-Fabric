@@ -1,0 +1,41 @@
+{
+  "_comment": "Red Mushroom Blocks & Items",
+  "block.enhanced_mushrooms.red_mushroom_stem": "Tallo de hongo rojo",
+  "block.enhanced_mushrooms.stripped_red_mushroom_stem": "Tallo de hongo rojo sin corteza",
+  "block.enhanced_mushrooms.red_mushroom_hyphae": "Hifas de hongo rojo",
+  "block.enhanced_mushrooms.stripped_red_mushroom_hyphae": "Hifas de hongo rojo sin corteza",
+  "block.enhanced_mushrooms.red_mushroom_planks": "Madera de hongo rojo",
+  "block.enhanced_mushrooms.red_mushroom_slab": "Baldosa de hongo rojo",
+  "block.enhanced_mushrooms.red_mushroom_stairs": "Escaleras de hongo rojo",
+  "block.enhanced_mushrooms.red_mushroom_pressure_plate": "Placa de presión de hongo rojo",
+  "block.enhanced_mushrooms.red_mushroom_fence": "Valla de hongo rojo",
+  "block.enhanced_mushrooms.red_mushroom_fence_gate": "Puerta de valla de hongo rojo",
+  "block.enhanced_mushrooms.red_mushroom_button": "Botón de hongo rojo",
+  "block.enhanced_mushrooms.red_mushroom_trapdoor": "Escotilla de hongo rojo",
+  "block.enhanced_mushrooms.red_mushroom_door": "Puerta de hongo rojo",
+  "block.enhanced_mushrooms.red_mushroom_sign": "Cartel de hongo rojo",
+
+  "item.enhanced_mushrooms.red_mushroom_boat": "Bote de hongo rojo",
+
+  "_comment2": "Brown Mushroom Blocks & Items",
+  "block.enhanced_mushrooms.brown_mushroom_stem": "Tallo de hongo marrón",
+  "block.enhanced_mushrooms.stripped_brown_mushroom_stem": "Tallo de hongo marrón sin corteza",
+  "block.enhanced_mushrooms.brown_mushroom_hyphae": "Hifas de hongo marrón",
+  "block.enhanced_mushrooms.stripped_brown_mushroom_hyphae": "Hifas de hongo marrón sin corteza",
+  "block.enhanced_mushrooms.brown_mushroom_planks": "Madera de hongo marrón",
+  "block.enhanced_mushrooms.brown_mushroom_slab": "Baldosa de hongo marrón",
+  "block.enhanced_mushrooms.brown_mushroom_stairs": "Escaleras de hongo marrón",
+  "block.enhanced_mushrooms.brown_mushroom_pressure_plate": "Placa de presión de hongo marrón",
+  "block.enhanced_mushrooms.brown_mushroom_fence": "Valla de hongo marrón",
+  "block.enhanced_mushrooms.brown_mushroom_fence_gate": "Puerta de valla de hongo marrón",
+  "block.enhanced_mushrooms.brown_mushroom_button": "Botón de hongo marrón",
+  "block.enhanced_mushrooms.brown_mushroom_trapdoor": "Escotilla de hongo marrón",
+  "block.enhanced_mushrooms.brown_mushroom_door": "Puerta de hongo marrón",
+  "block.enhanced_mushrooms.brown_mushroom_sign": "Cartel de hongo marrón",
+
+  "item.enhanced_mushrooms.brown_mushroom_boat": "Bote de hongo marrón",
+
+  "_comment3": "Misc",
+  "item.enhanced_mushrooms.roasted_mushrooms": "Hongos asados",
+  "item.enhanced_mushrooms.beef_stew": "Guiso de res"
+}

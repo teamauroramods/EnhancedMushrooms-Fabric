@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "enhanced_mushrooms",
+  "version": "${version}",
+  "name": "Enhanced Mushrooms",
+  "description": "Minecraft mod that adds planks for mushrooms and overhauls mushroom stems to work like wood.",
+  "authors": [
+    "Team Aurora"
+  ],
+  "contributors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/enhanced_mushrooms/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.github.teamaurora.enhanced_mushrooms.EnhancedMushrooms"
+    ],
+    "client": [
+      "com.github.teamaurora.enhanced_mushrooms.EnhancedMushroomsClient",
+      "com.github.teamaurora.enhanced_mushrooms.util.BoatSpawnNetworkHandler::register"
+    ],
+    "server": []
+  },
+  "mixins": [
+    "enhanced_mushrooms.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*"
+  }
+}

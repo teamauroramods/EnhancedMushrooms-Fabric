@@ -1,0 +1,41 @@
+{
+  "_comment": "Red Mushroom Blocks & Items",
+  "block.enhanced_mushrooms.red_mushroom_stem": "빨간색 버섯 자루",
+  "block.enhanced_mushrooms.stripped_red_mushroom_stem": "껍질 벗긴 빨간색 버섯 자루",
+  "block.enhanced_mushrooms.red_mushroom_hyphae": "빨간색 버섯 균사",
+  "block.enhanced_mushrooms.stripped_red_mushroom_hyphae": "껍질 벗긴 빨간색 버섯 균사",
+  "block.enhanced_mushrooms.red_mushroom_planks": "빨간색 버섯 판자",
+  "block.enhanced_mushrooms.red_mushroom_slab": "빨간색 버섯 반 블록",
+  "block.enhanced_mushrooms.red_mushroom_stairs": "빨간색 버섯 계단",
+  "block.enhanced_mushrooms.red_mushroom_pressure_plate": "빨간색 버섯 압력판",
+  "block.enhanced_mushrooms.red_mushroom_fence": "빨간색 버섯 울타리",
+  "block.enhanced_mushrooms.red_mushroom_fence_gate": "빨간색 버섯 울타리 문",
+  "block.enhanced_mushrooms.red_mushroom_button": "빨간색 버섯 버튼",
+  "block.enhanced_mushrooms.red_mushroom_trapdoor": "빨간색 버섯 다락문",
+  "block.enhanced_mushrooms.red_mushroom_door": "빨간색 버섯 문",
+  "block.enhanced_mushrooms.red_mushroom_sign": "빨간색 버섯 표지판",
+
+  "item.enhanced_mushrooms.red_mushroom_boat": "빨간색 버섯 보트",
+
+  "_comment2": "Brown Mushroom Blocks & Items",
+  "block.enhanced_mushrooms.brown_mushroom_stem": "갈색 버섯 자루",
+  "block.enhanced_mushrooms.stripped_brown_mushroom_stem": "껍질 벗긴 갈색 버섯 자루",
+  "block.enhanced_mushrooms.brown_mushroom_hyphae": "갈색 버섯 균사",
+  "block.enhanced_mushrooms.stripped_brown_mushroom_hyphae": "껍질 벗긴 갈색 버섯 균사",
+  "block.enhanced_mushrooms.brown_mushroom_planks": "갈색 버섯 판자",
+  "block.enhanced_mushrooms.brown_mushroom_slab": "갈색 버섯 반 블록",
+  "block.enhanced_mushrooms.brown_mushroom_stairs": "갈색 버섯 계단",
+  "block.enhanced_mushrooms.brown_mushroom_pressure_plate": "갈색 버섯 압력판",
+  "block.enhanced_mushrooms.brown_mushroom_fence": "갈색 버섯 울타리",
+  "block.enhanced_mushrooms.brown_mushroom_fence_gate": "갈색 버섯 울타리 문",
+  "block.enhanced_mushrooms.brown_mushroom_button": "갈색 버섯 버튼",
+  "block.enhanced_mushrooms.brown_mushroom_trapdoor": "갈색 버섯 다락문",
+  "block.enhanced_mushrooms.brown_mushroom_door": "갈색 버섯 문",
+  "block.enhanced_mushrooms.brown_mushroom_sign": "갈색 버섯 표지판",
+
+  "item.enhanced_mushrooms.brown_mushroom_boat": "갈색 버섯 보트",
+
+  "_comment3": "Misc",
+  "item.enhanced_mushrooms.roasted_mushrooms": "구운 버섯",
+  "item.enhanced_mushrooms.beef_stew": "소고기 스튜"
+}
