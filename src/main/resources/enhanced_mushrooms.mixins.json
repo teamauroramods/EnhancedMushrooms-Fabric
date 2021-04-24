@@ -5,13 +5,12 @@
   "mixins": [
     "BoatItemAccessor",
     "MixinBlockEntityType",
-    "MixinBoatEntityRenderer",
-    "MixinSignBlockEntityRenderer",
     "MixinTexturedRenderLayers",
     "MushroomPlantBlockMixin"
   ],
   "client": [
     "MixinSignBlockEntityRenderer",
+    "MixinBoatEntityRenderer",
     "MixinTexturedRenderLayers"
   ],
   "server": [
