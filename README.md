@@ -1,7 +1,7 @@
 # Enhanced Mushrooms Fabric
 
 </a>
-<a href="https://discord.gg/eFsz5SK">
+<a href="https://discord.gg/VzXSCFp">
   <img alt="Discord" src="https://img.shields.io/discord/440256241932173323?label=&color=4C3828&labelColor=936E4D&logo=Discord&logoColor=4C3828&style=for-the-badge">
 </a>
 <a href="https://twitter.com/teamauroramods">
