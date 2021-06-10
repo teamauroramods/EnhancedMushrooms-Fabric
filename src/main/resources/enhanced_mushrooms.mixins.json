@@ -1,7 +1,7 @@
 {
   "required": true,
   "package": "com.github.teamaurora.enhanced_mushrooms.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_16",
   "mixins": [
     "BoatItemAccessor",
     "MixinBlockEntityType",
@@ -9,7 +9,6 @@
     "MushroomPlantBlockMixin"
   ],
   "client": [
-    "MixinSignBlockEntityRenderer",
     "MixinBoatEntityRenderer",
     "MixinTexturedRenderLayers"
   ],

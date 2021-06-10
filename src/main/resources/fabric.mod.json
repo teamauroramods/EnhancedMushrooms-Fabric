@@ -17,16 +17,18 @@
       "com.github.teamaurora.enhanced_mushrooms.EnhancedMushrooms"
     ],
     "client": [
-      "com.github.teamaurora.enhanced_mushrooms.EnhancedMushroomsClient",
-      "com.github.teamaurora.enhanced_mushrooms.util.BoatSpawnNetworkHandler::register"
+      "com.github.teamaurora.enhanced_mushrooms.EnhancedMushroomsClient"
     ],
     "server": []
   },
+  "accessWidener" : "enhanced_mushrooms.accesswidener",
   "mixins": [
     "enhanced_mushrooms.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.11.3",
-    "fabric": "*"
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
   }
 }

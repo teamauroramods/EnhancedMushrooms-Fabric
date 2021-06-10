@@ -1,10 +1,7 @@
 package com.github.teamaurora.enhanced_mushrooms.block;
 
-import java.util.function.Supplier;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.MaterialColor;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
@@ -19,10 +16,12 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import java.util.function.Supplier;
+
 public class StrippableLogBlock extends PillarBlock {
     private Supplier<Block> stripped;
 
-    public StrippableLogBlock(Supplier<Block> stripped, MaterialColor top, Settings settings) {
+    public StrippableLogBlock(Supplier<Block> stripped, Settings settings) {
         super(settings);
 
         this.stripped = stripped;
@@ -44,7 +43,7 @@ public class StrippableLogBlock extends PillarBlock {
 
         MiningToolItem tool = (MiningToolItem) held;
 
-        if(stripped != null && (tool.isEffectiveOn(state) || tool.getMiningSpeedMultiplier(heldStack, state) > 1.0F)) {
+        if(stripped != null && (tool.isSuitableFor(state) || tool.getMiningSpeedMultiplier(heldStack, state) > 1.0F)) {
             world.playSound(player, pos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
             if(!world.isClient) {

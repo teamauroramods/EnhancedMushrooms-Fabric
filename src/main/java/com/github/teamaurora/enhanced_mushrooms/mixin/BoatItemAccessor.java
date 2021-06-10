@@ -8,7 +8,6 @@ import net.minecraft.item.BoatItem;
 
 @Mixin(BoatItem.class)
 public interface BoatItemAccessor {
-
     @Accessor("type")
-    public BoatEntity.Type getType();
+    BoatEntity.Type getType();
 }

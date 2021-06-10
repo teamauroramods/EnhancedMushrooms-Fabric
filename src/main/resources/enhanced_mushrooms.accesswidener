@@ -1,0 +1,12 @@
+accessWidener   v1  named
+
+accessible  class   net/minecraft/block/entity/BlockEntityType$BlockEntityFactory
+accessible  class   net/minecraft/world/gen/feature/ConfiguredFeatures$Decorators
+
+accessible  method  net/minecraft/block/ComposterBlock  registerCompostableItem (FLnet/minecraft/item/ItemConvertible;)V
+accessible  method net/minecraft/block/DoorBlock    <init>  (Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible  method net/minecraft/block/TrapdoorBlock    <init>  (Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible  method net/minecraft/block/WoodenButtonBlock    <init>  (Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible  method net/minecraft/block/StairsBlock  <init>  (Lnet/minecraft/block/BlockState;Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible  method net/minecraft/block/PressurePlateBlock   <init>  (Lnet/minecraft/block/PressurePlateBlock$ActivationRule;Lnet/minecraft/block/AbstractBlock$Settings;)V
+accessible  method  net/minecraft/util/SignType register    (Lnet/minecraft/util/SignType;)Lnet/minecraft/util/SignType;

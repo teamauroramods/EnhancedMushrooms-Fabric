@@ -1,31 +1,24 @@
 package com.github.teamaurora.enhanced_mushrooms.util;
 
-import java.util.function.Supplier;
-
 import com.github.teamaurora.enhanced_mushrooms.EnhancedMushrooms;
 import com.github.teamaurora.enhanced_mushrooms.block.*;
-
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FenceBlock;
-import net.minecraft.block.FenceGateBlock;
-import net.minecraft.block.PillarBlock;
-import net.minecraft.block.SlabBlock;
+import net.minecraft.block.*;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.SignItem;
-import net.minecraft.util.Identifier;
+import net.minecraft.util.SignType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.BlockView;
+
+import java.util.function.Supplier;
 
 /*
  * Shamelessly stolen from Terrestria
@@ -35,25 +28,25 @@ public class WoodBlocks {
     public Block wood;
     public Block planks;
     public SlabBlock slab;
-    public EMStairsBlock stairs;
+    public StairsBlock stairs;
     public FenceBlock fence;
     public FenceGateBlock fenceGate;
-    public EMDoorBlock door;
-    public EMButtonBlock button;
-    public EMPressurePlateBlock pressurePlate;
+    public DoorBlock door;
+    public AbstractButtonBlock button;
+    public AbstractPressurePlateBlock pressurePlate;
     public EMSignBlock sign;
     public EMWallSignBlock wallSign;
-    public EMTrapdoorBlock trapdoor;
+    public TrapdoorBlock trapdoor;
     public Block strippedLog;
     public Block strippedWood;
     public EMBoatItem boat;
     public Supplier<EntityType<EMBoatEntity>> boatType;
 
     public String name;
-    public WoodColors colors;
+    public MapColor colors;
     public FlammableBlockRegistry registry;
 
-    public WoodBlocks(Block log, Block wood, Block planks, SlabBlock slab, EMStairsBlock stairs, FenceBlock fence, FenceGateBlock fenceGate, EMDoorBlock door, EMButtonBlock button, EMPressurePlateBlock pressurePlate, EMSignBlock sign, EMWallSignBlock wallSign, EMTrapdoorBlock trapdoor, Block strippedLog, Block strippedWood, EMBoatItem boat, Supplier<EntityType<EMBoatEntity>> boatType, String name, WoodColors colors, FlammableBlockRegistry registry) {
+    public WoodBlocks(Block log, Block wood, Block planks, SlabBlock slab, StairsBlock stairs, FenceBlock fence, FenceGateBlock fenceGate, DoorBlock door, AbstractButtonBlock button, AbstractPressurePlateBlock pressurePlate, EMSignBlock sign, EMWallSignBlock wallSign, TrapdoorBlock trapdoor, Block strippedLog, Block strippedWood, EMBoatItem boat, Supplier<EntityType<EMBoatEntity>> boatType, String name, MapColor colors, FlammableBlockRegistry registry) {
         this.log = log;
         this.wood = wood;
         this.planks = planks;
@@ -76,48 +69,48 @@ public class WoodBlocks {
         this.registry = registry;
     }
 
-    public static WoodBlocks generate(String name, WoodColors colors, Supplier<EntityType<EMBoatEntity>> boatType) {
+    public static WoodBlocks generate(String name, MapColor colors, Supplier<EntityType<EMBoatEntity>> boatType) {
         return generate(name, colors, FlammableBlockRegistry.getDefaultInstance(), boatType);
     }
 
-    public static WoodBlocks generate(String name, WoodColors colors, FlammableBlockRegistry registry, Supplier<EntityType<EMBoatEntity>> boatType) {
+    public static WoodBlocks generate(String name, MapColor colors, FlammableBlockRegistry registry, Supplier<EntityType<EMBoatEntity>> boatType) {
 
         Block log;
         Block wood;
         Block planks;
         SlabBlock slab;
-        EMStairsBlock stairs;
+        StairsBlock stairs;
         FenceBlock fence;
         FenceGateBlock fenceGate;
-        EMDoorBlock door;
-        EMButtonBlock button;
-        EMPressurePlateBlock pressurePlate;
+        DoorBlock door;
+        AbstractButtonBlock button;
+        AbstractPressurePlateBlock pressurePlate;
         EMSignBlock sign;
         EMWallSignBlock wallSign;
-        EMTrapdoorBlock trapdoor;
+        TrapdoorBlock trapdoor;
         Block strippedLog;
         Block strippedWood;
         EMBoatItem boat;
 
-        planks = new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).materialColor(colors.planks).breakByTool(FabricToolTags.AXES));
-        slab = new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).materialColor(colors.planks).breakByTool(FabricToolTags.AXES));
-        stairs = new EMStairsBlock(planks, FabricBlockSettings.copyOf(Blocks.OAK_STAIRS).materialColor(colors.planks).breakByTool(FabricToolTags.AXES));
-        fence = new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE).materialColor(colors.planks).breakByTool(FabricToolTags.AXES));
-        fenceGate = new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE).materialColor(colors.planks).breakByTool(FabricToolTags.AXES));
-        door = new EMDoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR).materialColor(colors.planks).breakByTool(FabricToolTags.AXES));
-        button = new EMButtonBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON).materialColor(colors.planks).breakByTool(FabricToolTags.AXES));
-        pressurePlate = new EMPressurePlateBlock(FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE).materialColor(colors.planks).breakByTool(FabricToolTags.AXES));
-        trapdoor = new EMTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR).materialColor(colors.planks).breakByTool(FabricToolTags.AXES));
+        planks = new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).materialColor(colors).breakByTool(FabricToolTags.AXES));
+        slab = new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).materialColor(colors).breakByTool(FabricToolTags.AXES));
+        stairs = new StairsBlock(planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS).materialColor(colors).breakByTool(FabricToolTags.AXES));
+        fence = new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE).materialColor(colors).breakByTool(FabricToolTags.AXES));
+        fenceGate = new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE).materialColor(colors).breakByTool(FabricToolTags.AXES));
+        door = new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR).materialColor(colors).breakByTool(FabricToolTags.AXES));
+        button = new WoodenButtonBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON).materialColor(colors).breakByTool(FabricToolTags.AXES));
+        pressurePlate = new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE).materialColor(colors).breakByTool(FabricToolTags.AXES));
+        trapdoor = new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR).materialColor(colors).breakByTool(FabricToolTags.AXES));
 
-        Identifier signTexture = EnhancedMushrooms.id("entity/signs/" + name);
+        SignType signType = SignType.register(new EMSignType(name));
 
-        sign = new EMSignBlock(signTexture, FabricBlockSettings.copyOf(Blocks.OAK_SIGN).materialColor(colors.planks).breakByTool(FabricToolTags.AXES));
-        wallSign = new EMWallSignBlock(signTexture, FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN).materialColor(colors.planks).breakByTool(FabricToolTags.AXES));
+        sign = new EMSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_SIGN).materialColor(colors).breakByTool(FabricToolTags.AXES), signType);
+        wallSign = new EMWallSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN).materialColor(colors).breakByTool(FabricToolTags.AXES), signType);
 
-        strippedLog = new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).materialColor(colors.planks).breakByTool(FabricToolTags.AXES));
-        strippedWood = new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).materialColor(colors.planks).breakByTool(FabricToolTags.AXES));
-        log = new StrippableLogBlock(() -> strippedLog, colors.planks, FabricBlockSettings.copyOf(Blocks.OAK_LOG).materialColor(colors.bark).breakByTool(FabricToolTags.AXES));
-        wood = new StrippableLogBlock(() -> strippedWood, colors.bark, FabricBlockSettings.copyOf(Blocks.OAK_LOG).materialColor(colors.bark).breakByTool(FabricToolTags.AXES));
+        strippedLog = new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).materialColor(colors).breakByTool(FabricToolTags.AXES));
+        strippedWood = new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).materialColor(colors).breakByTool(FabricToolTags.AXES));
+        log = new StrippableLogBlock(() -> strippedLog, FabricBlockSettings.copyOf(Blocks.OAK_LOG).materialColor(colors).breakByTool(FabricToolTags.AXES));
+        wood = new StrippableLogBlock(() -> strippedWood, FabricBlockSettings.copyOf(Blocks.OAK_LOG).materialColor(colors).breakByTool(FabricToolTags.AXES));
 
         boat = new EMBoatItem(boatType, new Item.Settings().maxCount(1).group(ItemGroup.TRANSPORTATION));
 
@@ -161,7 +154,6 @@ public class WoodBlocks {
     }
 
     public WoodBlocks registerItems() {
-
         registerBlockItem(name + "_stem", this.log, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
         registerBlockItem(name + "_hyphae", this.wood, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
         registerBlockItem("stripped_" + name + "_stem", this.strippedLog, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
@@ -210,8 +202,6 @@ public class WoodBlocks {
     private static BlockItem registerBlockItem(String name, Block block, Item.Settings settings) {
         BlockItem item = new BlockItem(block, settings);
         item.appendBlocks(Item.BLOCK_ITEMS, item);
-
-        ComposterRecipes.registerCompostableBlock(block);
 
         return Registry.register(Registry.ITEM, EnhancedMushrooms.id(name), item);
     }

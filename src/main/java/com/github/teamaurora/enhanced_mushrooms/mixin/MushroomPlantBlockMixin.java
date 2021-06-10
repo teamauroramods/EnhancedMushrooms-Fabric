@@ -14,7 +14,6 @@ import java.util.Random;
 
 @Mixin(MushroomPlantBlock.class)
 public class MushroomPlantBlockMixin extends PlantBlock implements Fertilizable {
-
     @Shadow
     public boolean isFertilizable(BlockView world, BlockPos pos, BlockState state, boolean isClient) {
         return true;
@@ -55,5 +54,4 @@ public class MushroomPlantBlockMixin extends PlantBlock implements Fertilizable 
     public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
         this.trySpawningEnhancedBigMushroom(world, pos, state, random);
     }
-
 }

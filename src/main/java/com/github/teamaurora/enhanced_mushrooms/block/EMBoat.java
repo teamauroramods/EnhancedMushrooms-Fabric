@@ -5,10 +5,10 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 
 public class EMBoat {
-    private Item item;
-    private Item planks;
-    private Identifier skin;
-    private BoatEntity.Type vanilla;
+    private final Item item;
+    private final Item planks;
+    private final Identifier skin;
+    private final BoatEntity.Type vanilla;
 
     public EMBoat(Item item, Item planks, Identifier skin) {
         this(item, planks, skin, BoatEntity.Type.OAK);
