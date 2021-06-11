@@ -9,7 +9,6 @@
     "MushroomPlantBlockMixin"
   ],
   "client": [
-    "MixinSignBlockEntityRenderer",
     "MixinBoatEntityRenderer",
     "MixinTexturedRenderLayers"
   ],

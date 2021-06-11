@@ -24,7 +24,7 @@ public class EMBoatItem extends Item {
     private static final Predicate<Entity> RIDERS = EntityPredicates.EXCEPT_SPECTATOR.and(Entity::collides);
     private final Supplier<EntityType<EMBoatEntity>> boatSupplier;
 
-    public EMBoatItem(Supplier<EntityType<EMBoatEntity>> boatSupplier, Item.Settings settings) {
+    public EMBoatItem(Supplier<EntityType<EMBoatEntity>> boatSupplier, Settings settings) {
         super(settings);
 
         this.boatSupplier = boatSupplier;
@@ -56,7 +56,7 @@ public class EMBoatItem extends Item {
 
         EMBoatEntity boat = createBoat(world, hit.getPos().x, hit.getPos().y, hit.getPos().z);
 
-        boat.yaw = player.yaw;
+        boat.setYaw(player.getYaw());
 
         if (!world.isSpaceEmpty(boat, boat.getBoundingBox().expand(-0.1D))) {
             return new TypedActionResult<>(ActionResult.FAIL, stack);
@@ -66,7 +66,7 @@ public class EMBoatItem extends Item {
             world.spawnEntity(boat);
         }
 
-        if (!player.abilities.creativeMode) {
+        if (!player.getAbilities().creativeMode) {
             stack.decrement(1);
         }
 

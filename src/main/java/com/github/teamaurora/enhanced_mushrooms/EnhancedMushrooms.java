@@ -22,7 +22,6 @@ public class EnhancedMushrooms implements ModInitializer {
         EMComposting.init();
 
         log(Level.INFO, "Initializing");
-        //TODO: Initializer
     }
 
     public static void log(Level level, String message){

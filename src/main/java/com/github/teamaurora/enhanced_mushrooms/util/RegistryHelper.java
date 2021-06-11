@@ -9,7 +9,6 @@ import java.lang.reflect.Modifier;
 import java.util.Locale;
 
 public final class RegistryHelper {
-
     @SafeVarargs
     public static <T> void register(Registry<T> registry, Class typeClass, Class from, RegistryCallback<T>... callbacks)
     {
@@ -35,7 +34,6 @@ public final class RegistryHelper {
         }
         catch (Exception e)
         {
-            //if crash == true; dont();
             e.printStackTrace();
         }
     }

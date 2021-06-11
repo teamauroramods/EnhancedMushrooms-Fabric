@@ -1,6 +1,6 @@
 package com.github.teamaurora.enhanced_mushrooms.util;
 
-import net.minecraft.block.MaterialColor;
+import net.minecraft.block.MapColor;
 
 /*
  * Shamelessly stolen from Terrestria
@@ -11,16 +11,13 @@ public class WoodColors {
 
     static {
         RED_MUSH = new WoodColors();
-        RED_MUSH.bark = MaterialColor.RED;
-        RED_MUSH.planks = MaterialColor.RED;
-        RED_MUSH.leaves = MaterialColor.RED;
+        RED_MUSH.bark = MapColor.RED;
+        RED_MUSH.planks = MapColor.RED;
         BROWN_MUSH = new WoodColors();
-        BROWN_MUSH.bark = MaterialColor.BROWN;
-        BROWN_MUSH.planks = MaterialColor.BROWN;
-        BROWN_MUSH.leaves = MaterialColor.BROWN;
+        BROWN_MUSH.bark = MapColor.BROWN;
+        BROWN_MUSH.planks = MapColor.BROWN;
     }
 
-    public MaterialColor bark;
-    public MaterialColor planks;
-    public MaterialColor leaves = MaterialColor.FOLIAGE;
+    public MapColor bark;
+    public MapColor planks;
 }

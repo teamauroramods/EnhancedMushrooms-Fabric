@@ -17,11 +17,11 @@
       "com.github.teamaurora.enhanced_mushrooms.EnhancedMushrooms"
     ],
     "client": [
-      "com.github.teamaurora.enhanced_mushrooms.EnhancedMushroomsClient",
-      "com.github.teamaurora.enhanced_mushrooms.util.BoatSpawnNetworkHandler::register"
+      "com.github.teamaurora.enhanced_mushrooms.EnhancedMushroomsClient"
     ],
     "server": []
   },
+  "accessWidener" : "enhanced_mushrooms.accesswidener",
   "mixins": [
     "enhanced_mushrooms.mixins.json"
   ],
