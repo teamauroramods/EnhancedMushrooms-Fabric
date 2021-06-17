@@ -1,7 +1,7 @@
 <p align="center"><img src="https://raw.githubusercontent.com/teamauroramods/EnhancedMushrooms-Forge/master/src/main/resources/logo.png" width=60%></p>
 <h3 align="center">Enhanced Mushrooms Fabric</h3>
 
-<p align="center">Minecraft 1.16's new wood types are new nether mushrooms. Enhanced Mushrooms aims to add consistency by making red and brown mushrooms also work as wood types.</p>
+<p align="center">Minecraft 1.17's new wood types are new nether mushrooms. Enhanced Mushrooms aims to add consistency by making red and brown mushrooms also work as wood types.</p>
 <p align="center">The mod also adds Roasted Mushrooms, a new food source from mushrooms that does not require a bowl!</p>
 <p align="center">
   <a title="Fabric API" href="https://www.curseforge.com/minecraft/mc-mods/fabric-api">
