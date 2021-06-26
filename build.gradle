@@ -13,11 +13,22 @@ group = project.maven_group
 minecraft.accessWidener "src/main/resources/enhanced_mushrooms.accesswidener"
 
 dependencies {
-	// Main Fabric
+	//Main Fabric
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+	//LibCD
+	modApi "io.github.cottonmc:LibCD:${project.libcd_version}"
+	include "io.github.cottonmc:LibCD:${project.libcd_version}"
+}
+
+repositories {
+	maven {
+		name = "Cotton"
+		url = "https://server.bbkr.space/artifactory/libs-release"
+	}
 }
 
 processResources {
