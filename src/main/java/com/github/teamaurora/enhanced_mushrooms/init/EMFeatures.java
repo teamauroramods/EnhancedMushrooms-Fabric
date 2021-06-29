@@ -13,6 +13,7 @@ import net.minecraft.block.MushroomBlock;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.decorator.DecoratorConfig;
@@ -23,7 +24,7 @@ import java.util.function.Predicate;
 
 public class EMFeatures {
     private static final Predicate<BiomeSelectionContext> MUSHROOM_BIOMES = BiomeSelectors.categories(Biome.Category.MUSHROOM);
-    private static final Predicate<BiomeSelectionContext> FOREST_BIOMES = BiomeSelectors.categories(Biome.Category.FOREST);
+    private static final Predicate<BiomeSelectionContext> DARK_FOREST = BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST, BiomeKeys.DARK_FOREST_HILLS);
 
     private static void doModifications()
     {
@@ -48,23 +49,6 @@ public class EMFeatures {
                     }
                 });
 
-        //Huge Red Mushroom Dark
-        BiomeModifications.create(EnhancedMushrooms.id("remove_vanilla_red_mushroom_dark_trees"))
-                .add(ModificationPhase.REPLACEMENTS, FOREST_BIOMES, (c)->{
-                    if(c.getGenerationSettings().removeBuiltInFeature(ConfiguredFeatures.DARK_FOREST_VEGETATION_RED))
-                    {
-                        c.getGenerationSettings().addFeature(GenerationStep.Feature.VEGETAL_DECORATION, registryKey(EMFeatures.DARK_FOREST_VEGETATION_RED));
-                    }
-                });
-        //Huge Brown Mushroom Dark
-        BiomeModifications.create(EnhancedMushrooms.id("remove_vanilla_brown_mushroom_dark_trees"))
-                .add(ModificationPhase.REPLACEMENTS, FOREST_BIOMES, (c)->{
-                    if(c.getGenerationSettings().removeBuiltInFeature(ConfiguredFeatures.DARK_FOREST_VEGETATION_BROWN))
-                    {
-                        c.getGenerationSettings().addFeature(GenerationStep.Feature.VEGETAL_DECORATION, registryKey(EMFeatures.DARK_FOREST_VEGETATION_BROWN));
-                    }
-                });
-
         //Mushroom Fields Vegetation's
         BiomeModifications.create(EnhancedMushrooms.id("remove_mushroom_field_vegetation"))
                 .add(ModificationPhase.REPLACEMENTS, MUSHROOM_BIOMES, (c)->{
@@ -73,6 +57,26 @@ public class EMFeatures {
                         c.getGenerationSettings().addFeature(GenerationStep.Feature.VEGETAL_DECORATION, registryKey(EMFeatures.MUSHROOM_FIELD_VEGETATION));
                     }
                 });
+
+        /*
+        //Huge Red Mushroom Dark
+        BiomeModifications.create(EnhancedMushrooms.id("remove_vanilla_red_mushroom_dark_trees"))
+                .add(ModificationPhase.REPLACEMENTS, DARK_FOREST, (c)->{
+                    if(c.getGenerationSettings().removeBuiltInFeature(ConfiguredFeatures.DARK_FOREST_VEGETATION_RED))
+                    {
+                        c.getGenerationSettings().addFeature(GenerationStep.Feature.VEGETAL_DECORATION, registryKey(EMFeatures.HUGE_RED_MUSHROOM));
+                    }
+                });
+
+        //Huge Brown Mushroom Dark
+        BiomeModifications.create(EnhancedMushrooms.id("remove_vanilla_brown_mushroom_dark_trees"))
+                .add(ModificationPhase.REPLACEMENTS, DARK_FOREST, (c)->{
+                    if(c.getGenerationSettings().removeBuiltInFeature(ConfiguredFeatures.DARK_FOREST_VEGETATION_BROWN))
+                    {
+                        c.getGenerationSettings().addFeature(GenerationStep.Feature.VEGETAL_DECORATION, registryKey(EMFeatures.DARK_FOREST_VEGETATION_BROWN));
+                    }
+                });
+         */
     }
 
     protected static final BlockState RED_MUSHROOM_BLOCK;
@@ -92,6 +96,9 @@ public class EMFeatures {
 
     public static final ConfiguredFeature<?, ?> DARK_FOREST_VEGETATION_RED = Feature.RANDOM_SELECTOR.configure(new RandomFeatureConfig(ImmutableList.of(EMFeatures.HUGE_RED_MUSHROOM.withChance(0.025F), EMFeatures.HUGE_BROWN_MUSHROOM.withChance(0.05F), ConfiguredFeatures.DARK_OAK.withChance(0.6666667F), ConfiguredFeatures.BIRCH.withChance(0.2F), ConfiguredFeatures.FANCY_OAK.withChance(0.1F)), ConfiguredFeatures.OAK)).decorate(Decorator.DARK_OAK_TREE.configure(DecoratorConfig.DEFAULT));
     public static final ConfiguredFeature<?, ?> DARK_FOREST_VEGETATION_BROWN = Feature.RANDOM_SELECTOR.configure(new RandomFeatureConfig(ImmutableList.of(EMFeatures.HUGE_BROWN_MUSHROOM.withChance(0.025F), EMFeatures.HUGE_RED_MUSHROOM.withChance(0.05F), ConfiguredFeatures.DARK_OAK.withChance(0.6666667F), ConfiguredFeatures.BIRCH.withChance(0.2F), ConfiguredFeatures.FANCY_OAK.withChance(0.1F)), ConfiguredFeatures.OAK)).decorate(Decorator.DARK_OAK_TREE.configure(DecoratorConfig.DEFAULT));
+
+    //public static final ConfiguredFeature<?, ?> DARK_FOREST_VEGETATION_BROWN = Feature.RANDOM_SELECTOR.configure("dark_forest_vegetation_brown", Feature.RANDOM_SELECTOR.configure(new RandomFeatureConfig(ImmutableList.of(HUGE_BROWN_MUSHROOM.withChance(0.025F), HUGE_RED_MUSHROOM.withChance(0.05F), ConfiguredFeatures.DARK_OAK.withChance(0.6666667F), ConfiguredFeatures.BIRCH.withChance(0.2F), ConfiguredFeatures.FANCY_OAK.withChance(0.1F)), ConfiguredFeatures.OAK)).decorate(ConfiguredFeatures.Decorators.DARK_OAK_TREE_HEIGHTMAP));
+    //public static final ConfiguredFeature<?, ?> DARK_FOREST_VEGETATION_RED = Feature.RANDOM_SELECTOR.configure("dark_forest_vegetation_red", Feature.RANDOM_SELECTOR.configure(new RandomFeatureConfig(ImmutableList.of(HUGE_RED_MUSHROOM.withChance(0.025F), HUGE_BROWN_MUSHROOM.withChance(0.05F), ConfiguredFeatures.DARK_OAK.withChance(0.6666667F), ConfiguredFeatures.BIRCH.withChance(0.2F), ConfiguredFeatures.FANCY_OAK.withChance(0.1F)), ConfiguredFeatures.OAK)).decorate(ConfiguredFeatures.Decorators.DARK_OAK_TREE_HEIGHTMAP));
 
     public static final ConfiguredFeature<?, ?> MUSHROOM_FIELD_VEGETATION = Feature.RANDOM_BOOLEAN_SELECTOR.configure(new RandomBooleanFeatureConfig(() -> { return HUGE_RED_MUSHROOM; }, () -> { return HUGE_BROWN_MUSHROOM; })).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP);
 
