@@ -58,13 +58,12 @@ public class EMFeatures {
                     }
                 });
 
-        /*
         //Huge Red Mushroom Dark
         BiomeModifications.create(EnhancedMushrooms.id("remove_vanilla_red_mushroom_dark_trees"))
                 .add(ModificationPhase.REPLACEMENTS, DARK_FOREST, (c)->{
                     if(c.getGenerationSettings().removeBuiltInFeature(ConfiguredFeatures.DARK_FOREST_VEGETATION_RED))
                     {
-                        c.getGenerationSettings().addFeature(GenerationStep.Feature.VEGETAL_DECORATION, registryKey(EMFeatures.HUGE_RED_MUSHROOM));
+                        c.getGenerationSettings().addFeature(GenerationStep.Feature.VEGETAL_DECORATION, registryKey(EMFeatures.DARK_FOREST_VEGETATION_RED));
                     }
                 });
 
@@ -76,7 +75,6 @@ public class EMFeatures {
                         c.getGenerationSettings().addFeature(GenerationStep.Feature.VEGETAL_DECORATION, registryKey(EMFeatures.DARK_FOREST_VEGETATION_BROWN));
                     }
                 });
-         */
     }
 
     protected static final BlockState RED_MUSHROOM_BLOCK;
@@ -97,8 +95,8 @@ public class EMFeatures {
     public static final ConfiguredFeature<?, ?> DARK_FOREST_VEGETATION_RED = Feature.RANDOM_SELECTOR.configure(new RandomFeatureConfig(ImmutableList.of(EMFeatures.HUGE_RED_MUSHROOM.withChance(0.025F), EMFeatures.HUGE_BROWN_MUSHROOM.withChance(0.05F), ConfiguredFeatures.DARK_OAK.withChance(0.6666667F), ConfiguredFeatures.BIRCH.withChance(0.2F), ConfiguredFeatures.FANCY_OAK.withChance(0.1F)), ConfiguredFeatures.OAK)).decorate(Decorator.DARK_OAK_TREE.configure(DecoratorConfig.DEFAULT));
     public static final ConfiguredFeature<?, ?> DARK_FOREST_VEGETATION_BROWN = Feature.RANDOM_SELECTOR.configure(new RandomFeatureConfig(ImmutableList.of(EMFeatures.HUGE_BROWN_MUSHROOM.withChance(0.025F), EMFeatures.HUGE_RED_MUSHROOM.withChance(0.05F), ConfiguredFeatures.DARK_OAK.withChance(0.6666667F), ConfiguredFeatures.BIRCH.withChance(0.2F), ConfiguredFeatures.FANCY_OAK.withChance(0.1F)), ConfiguredFeatures.OAK)).decorate(Decorator.DARK_OAK_TREE.configure(DecoratorConfig.DEFAULT));
 
-    //public static final ConfiguredFeature<?, ?> DARK_FOREST_VEGETATION_BROWN = Feature.RANDOM_SELECTOR.configure("dark_forest_vegetation_brown", Feature.RANDOM_SELECTOR.configure(new RandomFeatureConfig(ImmutableList.of(HUGE_BROWN_MUSHROOM.withChance(0.025F), HUGE_RED_MUSHROOM.withChance(0.05F), ConfiguredFeatures.DARK_OAK.withChance(0.6666667F), ConfiguredFeatures.BIRCH.withChance(0.2F), ConfiguredFeatures.FANCY_OAK.withChance(0.1F)), ConfiguredFeatures.OAK)).decorate(ConfiguredFeatures.Decorators.DARK_OAK_TREE_HEIGHTMAP));
-    //public static final ConfiguredFeature<?, ?> DARK_FOREST_VEGETATION_RED = Feature.RANDOM_SELECTOR.configure("dark_forest_vegetation_red", Feature.RANDOM_SELECTOR.configure(new RandomFeatureConfig(ImmutableList.of(HUGE_RED_MUSHROOM.withChance(0.025F), HUGE_BROWN_MUSHROOM.withChance(0.05F), ConfiguredFeatures.DARK_OAK.withChance(0.6666667F), ConfiguredFeatures.BIRCH.withChance(0.2F), ConfiguredFeatures.FANCY_OAK.withChance(0.1F)), ConfiguredFeatures.OAK)).decorate(ConfiguredFeatures.Decorators.DARK_OAK_TREE_HEIGHTMAP));
+//    public static final ConfiguredFeature<?, ?> DARK_FOREST_VEGETATION_BROWN = Feature.RANDOM_SELECTOR.configure("dark_forest_vegetation_brown", Feature.RANDOM_SELECTOR.configure(new RandomFeatureConfig(ImmutableList.of(HUGE_BROWN_MUSHROOM.withChance(0.025F), HUGE_RED_MUSHROOM.withChance(0.05F), ConfiguredFeatures.DARK_OAK.withChance(0.6666667F), ConfiguredFeatures.BIRCH.withChance(0.2F), ConfiguredFeatures.FANCY_OAK.withChance(0.1F)), ConfiguredFeatures.OAK)).decorate(ConfiguredFeatures.Decorators.DARK_OAK_TREE_HEIGHTMAP));
+//    public static final ConfiguredFeature<?, ?> DARK_FOREST_VEGETATION_RED = Feature.RANDOM_SELECTOR.configure("dark_forest_vegetation_red", Feature.RANDOM_SELECTOR.configure(new RandomFeatureConfig(ImmutableList.of(HUGE_RED_MUSHROOM.withChance(0.025F), HUGE_BROWN_MUSHROOM.withChance(0.05F), ConfiguredFeatures.DARK_OAK.withChance(0.6666667F), ConfiguredFeatures.BIRCH.withChance(0.2F), ConfiguredFeatures.FANCY_OAK.withChance(0.1F)), ConfiguredFeatures.OAK)).decorate(ConfiguredFeatures.Decorators.DARK_OAK_TREE_HEIGHTMAP));
 
     public static final ConfiguredFeature<?, ?> MUSHROOM_FIELD_VEGETATION = Feature.RANDOM_BOOLEAN_SELECTOR.configure(new RandomBooleanFeatureConfig(() -> { return HUGE_RED_MUSHROOM; }, () -> { return HUGE_BROWN_MUSHROOM; })).decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP);
 
