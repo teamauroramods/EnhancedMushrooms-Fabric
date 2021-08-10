@@ -6,7 +6,8 @@
     "BoatItemAccessor",
     "MixinBlockEntityType",
     "MixinTexturedRenderLayers",
-    "MushroomPlantBlockMixin"
+    "MushroomPlantBlockMixin",
+    "MixinAxeItem"
   ],
   "client": [
     "MixinBoatEntityRenderer",
