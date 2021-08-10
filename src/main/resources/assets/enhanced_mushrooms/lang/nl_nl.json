@@ -1,0 +1,41 @@
+{
+  "_comment": "Rode Paddenstoelblokken & Voorwerpen",
+  "block.enhanced_mushrooms.red_mushroom_stem": "Rode Paddenstoelen Stam",
+  "block.enhanced_mushrooms.stripped_red_mushroom_stem": "Gestripte Rode Paddenstoelen Stam",
+  "block.enhanced_mushrooms.red_mushroom_hyphae": "Rode Paddenstoelen Schimmeldraden",
+  "block.enhanced_mushrooms.stripped_red_mushroom_hyphae": "Gestripte Rode Paddenstoelen Schimmeldraden",
+  "block.enhanced_mushrooms.red_mushroom_planks": "Rode Paddenstoelen Planken",
+  "block.enhanced_mushrooms.red_mushroom_slab": "Rode Paddenstoelen Plaat",
+  "block.enhanced_mushrooms.red_mushroom_stairs": "Rode Paddenstoelen Trappen",
+  "block.enhanced_mushrooms.red_mushroom_pressure_plate": "Rode Paddenstoelen Drukplaat",
+  "block.enhanced_mushrooms.red_mushroom_fence": "Rode Paddenstoelen Hek",
+  "block.enhanced_mushrooms.red_mushroom_fence_gate": "Rode Paddenstoelen Poort",
+  "block.enhanced_mushrooms.red_mushroom_button": "Rode Paddenstoelen Knop",
+  "block.enhanced_mushrooms.red_mushroom_trapdoor": "Rode Paddenstoelen Valluik",
+  "block.enhanced_mushrooms.red_mushroom_door": "Rode Paddenstoelen Deur",
+  "block.enhanced_mushrooms.red_mushroom_sign": "Rode Paddenstoelen Bord",
+
+  "item.enhanced_mushrooms.red_mushroom_boat": "Rode Paddenstoelen Boot",
+
+  "_comment2": "Bruine Paddenstoelblokken & Voorwerpen",
+  "block.enhanced_mushrooms.brown_mushroom_stem": "Bruine Paddenstoelen Stam",
+  "block.enhanced_mushrooms.stripped_brown_mushroom_stem": "Gestripte Bruine Paddenstoelen Stam",
+  "block.enhanced_mushrooms.brown_mushroom_hyphae": "Bruine Paddenstoelen Schimmeldraden",
+  "block.enhanced_mushrooms.stripped_brown_mushroom_hyphae": "Gestripte Bruine Paddelstoelen Schimmeldraden",
+  "block.enhanced_mushrooms.brown_mushroom_planks": "Bruine Paddelstoelen Planken",
+  "block.enhanced_mushrooms.brown_mushroom_slab": "Bruine Paddelstoelen Plaat",
+  "block.enhanced_mushrooms.brown_mushroom_stairs": "Bruine Paddelstoelen Trappen",
+  "block.enhanced_mushrooms.brown_mushroom_pressure_plate": "Bruine Paddelstoelen Drukplaat",
+  "block.enhanced_mushrooms.brown_mushroom_fence": "Bruine Paddelstoelen Hek",
+  "block.enhanced_mushrooms.brown_mushroom_fence_gate": "Bruine Paddelstoelen Poort",
+  "block.enhanced_mushrooms.brown_mushroom_button": "Bruine Paddelstoelen Knop",
+  "block.enhanced_mushrooms.brown_mushroom_trapdoor": "Bruine Paddelstoelen Valluik",
+  "block.enhanced_mushrooms.brown_mushroom_door": "Bruine Paddelstoelen Deur",
+  "block.enhanced_mushrooms.brown_mushroom_sign": "Bruine Paddelstoelen Bord",
+
+  "item.enhanced_mushrooms.brown_mushroom_boat": "Bruine Paddelstoelen Boot",
+
+  "_comment3": "Diversen",
+  "item.enhanced_mushrooms.roasted_mushrooms": "Gebakken Paddelstoelen",
+  "item.enhanced_mushrooms.beef_stew": "Biefstukstoofpot"
+}
