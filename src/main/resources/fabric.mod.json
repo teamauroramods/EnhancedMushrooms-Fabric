@@ -19,7 +19,9 @@
     "client": [
       "com.github.teamaurora.enhanced_mushrooms.EnhancedMushroomsClient"
     ],
-    "server": []
+    "mm:early_risers": [
+      "com.github.teamaurora.enhanced_mushrooms.EnhancedMushroomsEarlyRiser"
+    ]
   },
   "accessWidener" : "enhanced_mushrooms.accesswidener",
   "mixins": [
@@ -28,7 +30,7 @@
   "depends": {
     "fabricloader": ">=0.11.3",
     "fabric": "*",
-    "minecraft": "1.17.x",
+    "minecraft": "1.18.x",
     "java": ">=16"
   }
 }

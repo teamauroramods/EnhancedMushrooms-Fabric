@@ -5,6 +5,7 @@ import net.minecraft.block.MapColor;
 /*
  * Shamelessly stolen from Terrestria
  */
+
 public class WoodColors {
     public static final WoodColors RED_MUSH;
     public static final WoodColors BROWN_MUSH;

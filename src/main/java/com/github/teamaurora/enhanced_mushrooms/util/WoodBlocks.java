@@ -1,29 +1,35 @@
 package com.github.teamaurora.enhanced_mushrooms.util;
 
+import com.chocohead.mm.api.ClassTinkerers;
 import com.github.teamaurora.enhanced_mushrooms.EnhancedMushrooms;
-import com.github.teamaurora.enhanced_mushrooms.block.*;
+import com.github.teamaurora.enhanced_mushrooms.block.EMSignType;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.*;
-import net.minecraft.entity.EntityType;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.SignItem;
+import net.minecraft.entity.vehicle.BoatEntity;
+import net.minecraft.item.*;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.SignType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.BlockView;
 
-import java.util.function.Supplier;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+
 
 /*
  * Shamelessly stolen from Terrestria
  */
+
 public class WoodBlocks {
+    public static List<Block> signBlocks = new LinkedList<>();
+    public static Map<Block, Block> stripMap = new HashMap<>();
     public Block log;
     public Block wood;
     public Block planks;
@@ -34,19 +40,18 @@ public class WoodBlocks {
     public DoorBlock door;
     public AbstractButtonBlock button;
     public AbstractPressurePlateBlock pressurePlate;
-    public EMSignBlock sign;
-    public EMWallSignBlock wallSign;
+    public SignBlock sign;
+    public WallSignBlock wallSign;
     public TrapdoorBlock trapdoor;
     public Block strippedLog;
     public Block strippedWood;
-    public EMBoatItem boat;
-    public Supplier<EntityType<EMBoatEntity>> boatType;
-
+    public BoatItem boat;
+    public BoatEntity.Type boatType;
     public String name;
     public MapColor colors;
     public FlammableBlockRegistry registry;
 
-    public WoodBlocks(Block log, Block wood, Block planks, SlabBlock slab, StairsBlock stairs, FenceBlock fence, FenceGateBlock fenceGate, DoorBlock door, AbstractButtonBlock button, AbstractPressurePlateBlock pressurePlate, EMSignBlock sign, EMWallSignBlock wallSign, TrapdoorBlock trapdoor, Block strippedLog, Block strippedWood, EMBoatItem boat, Supplier<EntityType<EMBoatEntity>> boatType, String name, MapColor colors, FlammableBlockRegistry registry) {
+    public WoodBlocks(Block log, Block wood, Block planks, SlabBlock slab, StairsBlock stairs, FenceBlock fence, FenceGateBlock fenceGate, DoorBlock door, AbstractButtonBlock button, AbstractPressurePlateBlock pressurePlate, SignBlock sign, WallSignBlock wallSign, TrapdoorBlock trapdoor, Block strippedLog, Block strippedWood, String name, MapColor colors, FlammableBlockRegistry registry) {
         this.log = log;
         this.wood = wood;
         this.planks = planks;
@@ -62,18 +67,16 @@ public class WoodBlocks {
         this.trapdoor = trapdoor;
         this.strippedLog = strippedLog;
         this.strippedWood = strippedWood;
-        this.boat = boat;
-        this.boatType = boatType;
         this.name = name;
         this.colors = colors;
         this.registry = registry;
     }
 
-    public static WoodBlocks generate(String name, MapColor colors, Supplier<EntityType<EMBoatEntity>> boatType) {
-        return generate(name, colors, FlammableBlockRegistry.getDefaultInstance(), boatType);
+    public static WoodBlocks generate(String name, MapColor colors) {
+        return generate(name, colors, FlammableBlockRegistry.getDefaultInstance());
     }
 
-    public static WoodBlocks generate(String name, MapColor colors, FlammableBlockRegistry registry, Supplier<EntityType<EMBoatEntity>> boatType) {
+    public static WoodBlocks generate(String name, MapColor colors, FlammableBlockRegistry registry) {
 
         Block log;
         Block wood;
@@ -85,37 +88,67 @@ public class WoodBlocks {
         DoorBlock door;
         AbstractButtonBlock button;
         AbstractPressurePlateBlock pressurePlate;
-        EMSignBlock sign;
-        EMWallSignBlock wallSign;
+        SignBlock sign;
+        WallSignBlock wallSign;
         TrapdoorBlock trapdoor;
         Block strippedLog;
         Block strippedWood;
-        EMBoatItem boat;
 
-        planks = new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).materialColor(colors).breakByTool(FabricToolTags.AXES));
-        slab = new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).materialColor(colors).breakByTool(FabricToolTags.AXES));
-        stairs = new StairsBlock(planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS).materialColor(colors).breakByTool(FabricToolTags.AXES));
-        fence = new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE).materialColor(colors).breakByTool(FabricToolTags.AXES));
-        fenceGate = new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE).materialColor(colors).breakByTool(FabricToolTags.AXES));
-        door = new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR).materialColor(colors).breakByTool(FabricToolTags.AXES));
-        button = new WoodenButtonBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON).materialColor(colors).breakByTool(FabricToolTags.AXES));
-        pressurePlate = new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE).materialColor(colors).breakByTool(FabricToolTags.AXES));
-        trapdoor = new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR).materialColor(colors).breakByTool(FabricToolTags.AXES));
+        planks = new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).mapColor(colors).breakByTool(FabricToolTags.AXES));
+        slab = new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).mapColor(colors).breakByTool(FabricToolTags.AXES));
+        stairs = new StairsBlock(planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS).mapColor(colors).breakByTool(FabricToolTags.AXES));
+        fence = new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE).mapColor(colors).breakByTool(FabricToolTags.AXES));
+        fenceGate = new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE).mapColor(colors).breakByTool(FabricToolTags.AXES));
+        door = new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR).mapColor(colors).breakByTool(FabricToolTags.AXES));
+        button = new WoodenButtonBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON).mapColor(colors).breakByTool(FabricToolTags.AXES));
+        pressurePlate = new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE).mapColor(colors).breakByTool(FabricToolTags.AXES));
+        trapdoor = new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR).mapColor(colors).breakByTool(FabricToolTags.AXES));
 
-        SignType signType = SignType.register(new EMSignType(name));
+        SignType signType = EMSignType.register(new EMSignType(name));
 
-        sign = new EMSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_SIGN).materialColor(colors).breakByTool(FabricToolTags.AXES), signType);
-        wallSign = new EMWallSignBlock(FabricBlockSettings.copyOf(Blocks.OAK_WALL_SIGN).materialColor(colors).breakByTool(FabricToolTags.AXES), signType);
+        sign = new SignBlock(AbstractBlock.Settings.of(Material.WOOD).noCollision().strength(1.0F).sounds(BlockSoundGroup.WOOD), signType);
+        wallSign = new WallSignBlock(AbstractBlock.Settings.of(Material.WOOD).noCollision().strength(1.0F).sounds(BlockSoundGroup.WOOD).dropsLike(sign), signType);
 
-        strippedLog = new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).materialColor(colors).breakByTool(FabricToolTags.AXES));
-        strippedWood = new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).materialColor(colors).breakByTool(FabricToolTags.AXES));
-        log = new StrippableLogBlock(() -> strippedLog, FabricBlockSettings.copyOf(Blocks.OAK_LOG).materialColor(colors).breakByTool(FabricToolTags.AXES));
-        wood = new StrippableLogBlock(() -> strippedWood, FabricBlockSettings.copyOf(Blocks.OAK_LOG).materialColor(colors).breakByTool(FabricToolTags.AXES));
+        strippedLog = new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).mapColor(colors).breakByTool(FabricToolTags.AXES));
+        strippedWood = new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).mapColor(colors).breakByTool(FabricToolTags.AXES));
+        log = Blocks.createLogBlock(colors, colors);
+        wood = Blocks.createLogBlock(colors, colors);
 
-        boat = new EMBoatItem(boatType, new Item.Settings().maxCount(1).group(ItemGroup.TRANSPORTATION));
 
-        return new WoodBlocks(log, wood, planks, slab, stairs, fence, fenceGate, door, button, pressurePlate, sign, wallSign, trapdoor, strippedLog, strippedWood, boat, boatType, name, colors, registry);
+        stripMap.put(log, strippedLog);
 
+        return new WoodBlocks(log, wood, planks, slab, stairs, fence, fenceGate, door, button, pressurePlate, sign, wallSign, trapdoor, strippedLog, strippedWood, name, colors, registry);
+
+    }
+
+    private static <T extends Block> T register(String name, T block) {
+        return Registry.register(Registry.BLOCK, EnhancedMushrooms.id(name), block);
+    }
+
+    private static BlockItem registerBlockItem(String name, Block block, Item.Settings settings) {
+        BlockItem item = new BlockItem(block, settings);
+        item.appendBlocks(Item.BLOCK_ITEMS, item);
+
+        return Registry.register(Registry.ITEM, EnhancedMushrooms.id(name), item);
+    }
+
+    private static SignItem registerSignItem(String name, Block standing, Block wall, Item.Settings settings) {
+        return Registry.register(Registry.ITEM, EnhancedMushrooms.id(name), new SignItem(settings, standing, wall));
+    }
+
+    private static <I extends Item> I registerItem(String name, I item) {
+        return Registry.register(Registry.ITEM, EnhancedMushrooms.id(name), item);
+    }
+
+    public static boolean never(BlockState state, BlockView world, BlockPos pos) {
+        return false;
+    }
+
+    public WoodBlocks initBoat() {
+        boatType = ClassTinkerers.getEnum(BoatEntity.Type.class, "RED_MUSHROOM");
+        boat = new BoatItem(boatType, new Item.Settings().maxCount(1).group(ItemGroup.TRANSPORTATION));
+
+        return this;
     }
 
     public WoodBlocks register() {
@@ -145,6 +178,9 @@ public class WoodBlocks {
         register(name + "_sign", sign);
         register(name + "_wall_sign", wallSign);
 
+        signBlocks.add(sign);
+        signBlocks.add(wallSign);
+
         this.addManufacturedFireInfo();
 
         FuelRegistry.INSTANCE.add(this.fence, 300);
@@ -169,7 +205,7 @@ public class WoodBlocks {
         registerBlockItem(name + "_trapdoor", this.trapdoor, new FabricItemSettings().group(ItemGroup.REDSTONE));
         registerSignItem(name + "_sign", this.sign, this.wallSign, new Item.Settings().maxCount(16).group(ItemGroup.DECORATIONS));
 
-        registerItem(name + "_boat", boat);
+        //registerItem(name + "_boat", boat);
 
         return this;
     }
@@ -193,29 +229,6 @@ public class WoodBlocks {
         registry.add(stairs, 5, 20);
         registry.add(fence, 5, 20);
         registry.add(fenceGate, 5, 20);
-    }
-
-    private static <T extends Block> T register(String name, T block) {
-        return Registry.register(Registry.BLOCK, EnhancedMushrooms.id(name), block);
-    }
-
-    private static BlockItem registerBlockItem(String name, Block block, Item.Settings settings) {
-        BlockItem item = new BlockItem(block, settings);
-        item.appendBlocks(Item.BLOCK_ITEMS, item);
-
-        return Registry.register(Registry.ITEM, EnhancedMushrooms.id(name), item);
-    }
-
-    private static SignItem registerSignItem(String name, Block standing, Block wall, Item.Settings settings) {
-        return Registry.register(Registry.ITEM, EnhancedMushrooms.id(name), new SignItem(settings, standing, wall));
-    }
-
-    private static <I extends Item> I registerItem(String name, I item) {
-        return Registry.register(Registry.ITEM, EnhancedMushrooms.id(name), item);
-    }
-
-    public static boolean never(BlockState state, BlockView world, BlockPos pos) {
-        return false;
     }
 
 }
