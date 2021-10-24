@@ -1,6 +1,6 @@
 package com.github.teamaurora.enhanced_mushrooms.mixin;
 
-import com.github.teamaurora.enhanced_mushrooms.util.EMSign;
+import com.github.teamaurora.enhanced_mushrooms.util.WoodBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntityType;
 import org.spongepowered.asm.mixin.Mixin;
@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class MixinBlockEntityType {
     @Inject(method = "supports", at = @At("HEAD"), cancellable = true)
     private void supports(BlockState state, CallbackInfoReturnable<Boolean> cir) {
-        if (BlockEntityType.SIGN.equals(BlockEntityType.class.cast(this)) && state.getBlock() instanceof EMSign) {
+        if (BlockEntityType.SIGN.equals(BlockEntityType.class.cast(this)) && WoodBlocks.signBlocks.contains(state.getBlock())) {
             cir.setReturnValue(true);
         }
     }

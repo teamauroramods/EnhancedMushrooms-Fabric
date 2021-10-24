@@ -11,12 +11,12 @@ import java.util.Map;
 public class EMBlocks {
     private static final Map<Identifier, WoodBlocks> WOOD_BLOCKS = new LinkedHashMap<>();
 
-    public static WoodBlocks RED_MUSHROOM = add("red_mushroom", WoodBlocks.generate("red_mushroom", MapColor.RED , () -> EMBoats.RED_MUSHROOM_BOAT));
-    public static WoodBlocks BROWN_MUSHROOM = add("brown_mushroom", WoodBlocks.generate("brown_mushroom", MapColor.BROWN , () -> EMBoats.BROWN_MUSHROOM_BOAT));
+    public static WoodBlocks RED_MUSHROOM = add("red_mushroom", WoodBlocks.generate("red_mushroom", MapColor.RED));
+    public static WoodBlocks BROWN_MUSHROOM = add("brown_mushroom", WoodBlocks.generate("brown_mushroom", MapColor.BROWN));
 
-    public static void init(){
+    public static void init() {
         for (Identifier id : WOOD_BLOCKS.keySet()) {
-            WOOD_BLOCKS.get(id).register().registerItems();
+            WOOD_BLOCKS.get(id).register().registerItems().initBoat();
         }
     }
 

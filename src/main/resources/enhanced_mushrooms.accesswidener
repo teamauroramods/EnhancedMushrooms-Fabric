@@ -9,4 +9,5 @@ accessible  method net/minecraft/block/TrapdoorBlock    <init>  (Lnet/minecraft/
 accessible  method net/minecraft/block/WoodenButtonBlock    <init>  (Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible  method net/minecraft/block/StairsBlock  <init>  (Lnet/minecraft/block/BlockState;Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible  method net/minecraft/block/PressurePlateBlock   <init>  (Lnet/minecraft/block/PressurePlateBlock$ActivationRule;Lnet/minecraft/block/AbstractBlock$Settings;)V
-accessible  method  net/minecraft/util/SignType register    (Lnet/minecraft/util/SignType;)Lnet/minecraft/util/SignType;
+accessible  method net/minecraft/util/SignType register    (Lnet/minecraft/util/SignType;)Lnet/minecraft/util/SignType;
+accessible  method net/minecraft/block/Blocks   createLogBlock  (Lnet/minecraft/block/MapColor;Lnet/minecraft/block/MapColor;)Lnet/minecraft/block/PillarBlock;

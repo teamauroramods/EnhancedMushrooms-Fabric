@@ -3,17 +3,10 @@
   "package": "com.github.teamaurora.enhanced_mushrooms.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "BoatItemAccessor",
+    "MixinAxeItem",
     "MixinBlockEntityType",
-    "MixinTexturedRenderLayers",
-    "MushroomPlantBlockMixin",
-    "MixinAxeItem"
-  ],
-  "client": [
-    "MixinBoatEntityRenderer",
-    "MixinTexturedRenderLayers"
-  ],
-  "server": [
+    "MixinBoatEntity",
+    "MixinHugeMushroomFeature"
   ],
   "injectors": {
     "defaultRequire": 1
